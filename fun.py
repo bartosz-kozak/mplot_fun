@@ -1,4 +1,5 @@
 def create_dic_mplot(plik,kontekst='cg',odczyt=1,n_pz=100):
+    '''Funkcja towrzy słownik z informacją o liczbie i prociencie metylowanych cytozyn w każdej pozycji odczytów PE na podstawie pliku genorowanego przez program Bismark'''
     koor_dic = {}
     for k in range(1,7):
         l1 = (k-1)*100+3+(k-1)*4
@@ -31,6 +32,7 @@ def create_dic_mplot(plik,kontekst='cg',odczyt=1,n_pz=100):
     return plot_dic
 
 def make_plot(plik,odczyt=1,npz=100):
+    '''Funkcja gneruje M-bias plot na podstawie danych genarowanych przez program Bismark'''
     p = plik
     o = odczyt
     mnpz = npz
